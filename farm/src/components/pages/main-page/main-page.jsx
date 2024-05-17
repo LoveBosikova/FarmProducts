@@ -1,7 +1,12 @@
 import React from "react";
 
+import About from "../../blocks/about/about";
+
 function MainPage() {
-    return <></>;
+    return <>
+        <About /> 
+        {/* <Advantages /> */}
+    </>;
 }
 
 export default MainPage;

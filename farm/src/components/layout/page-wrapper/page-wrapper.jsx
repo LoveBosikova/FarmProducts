@@ -11,7 +11,7 @@ function PageWrapper({ ...prop }) {
         <>
             <Header></Header>
                 <main className="page-wrapper__main">
-                    <MainPage></MainPage>
+                    <MainPage {...prop} />
                 </main>
             <Footer></Footer>
         </>
