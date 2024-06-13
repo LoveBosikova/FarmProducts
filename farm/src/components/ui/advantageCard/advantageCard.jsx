@@ -1,6 +1,7 @@
 import React from "react";
 
-import Title, { TitleSize } from "../../ui/title/title";
+import Title from "../../ui/title/title";
+import { TitleOptions } from "../title/styled";
 import Subitle, { SubitleColor } from "../subtitle/subtitle";
 
 import "./style.css";
@@ -42,7 +43,7 @@ function AdvantageCard({src, title, mark, desc}) {
             </picture>
             <div className="advantage__textWrap">
                 <Subitle color={options.subtitleColor}>{mark}</Subitle>
-                <Title size={TitleSize.SMALL}>{title}</Title>
+                <Title size={TitleOptions.small}>{title}</Title>
             </div>
         </header>
         <p className="advantage__desc">{desc}</p>

@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { StyledSubitle } from "./styled";
 
 function Subitle({ children, color }) {
-    return <h1 className={`subtitle${color ? ` subtitle_${color}` : ""}`}>{children}</h1>;
+    return <StyledSubitle color={color}>{children}</StyledSubitle>;
 }
 
 export default Subitle;

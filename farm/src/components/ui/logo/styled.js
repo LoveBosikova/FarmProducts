@@ -1,15 +1,20 @@
-.logo__link {
+import styled from "styled-components";
+
+export const StyledLink = styled.a`
     display: flex;
     height: 44px;
     align-items: center;
     text-decoration: none;
-}
 
-.logo__link:hover {
+    &:hover {
     text-decoration: none;
 }
+`;
 
-.logo__text {
+export const StyledImage = styled.img`
+`;
+
+export const StyledSpan = styled.span`
     display: flex;
     height: 44px;
     margin-left: 24px;
@@ -17,4 +22,4 @@
     font-size: 28px;
     line-height: 42px;
     color: #333333;
-}
+`;

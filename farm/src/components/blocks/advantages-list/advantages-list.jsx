@@ -1,7 +1,7 @@
 import React from "react";
 
 import Title from "../../ui/title/title";
-import { TitleSize } from "../../ui/title/title";
+import { TitleOptions } from "../../ui/title/styled";
 import Button from "../../ui/button/button";
 import AdvantageCard from "../../ui/advantageCard/advantageCard";
 
@@ -14,7 +14,7 @@ function AdvantagesList({advantancies}) {
   return (
     <section className="advantages-list">
       <div className="title__wrap">
-      <Title size={TitleSize.SMALL}>Почему фермерские продукты лучше?</Title>
+      <Title size={TitleOptions.medium}>Почему фермерские продукты лучше?</Title>
       </div>
       <ul className="advantages-list__list">
         {
