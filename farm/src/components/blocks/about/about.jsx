@@ -5,24 +5,33 @@ import { TitleOptions } from "../../ui/title/styled";
 
 import farmer from '../../../assets/Farmer.png';
 
-import "./style.css";
+import { 
+    StyledAbout,
+    AboutWrapper,
+    AboutText,
+    PicWrap,
+    AboutFarmer,
+    AboutPicture
+} from "./styled.js";
+
+import "./styled.js";
 
 function About() {
     return (
-        <section className="about">
-            <div className="about__wrapper">
+        <StyledAbout>
+            <AboutWrapper>
                 <Title size={TitleOptions.large}>Магазин фермерских <br/> продуктов с доставкой</Title>
-                <p className="about__text">
+                <AboutText>
                 Все продукты изготавливаются под заказ. Фермеры начинают готовить продукты за день до отправки заказа клиентам. 
                 Именно поэтому мы принимаем заказы заранее и доставляем продукты максимально свежими.
-                </p>
-            </div>
-            <div className="about__picWrap">
-                <picture>
-                    <img className="about__farmer" src={farmer} alt="Фермер с натуральными продуктами" />
-                </picture>
-            </div>
-        </section>
+                </AboutText>
+            </AboutWrapper>
+            <PicWrap>
+                <AboutPicture>
+                    <AboutFarmer className="about__farmer" src={farmer} alt="Фермер с натуральными продуктами"></AboutFarmer>
+                </AboutPicture>
+            </PicWrap>
+        </StyledAbout>
     );
 }
 

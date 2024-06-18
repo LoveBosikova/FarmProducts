@@ -4,7 +4,14 @@ import Title from "../../ui/title/title";
 import { TitleOptions } from "../title/styled";
 import Subitle, { SubitleColor } from "../subtitle/subtitle";
 
-import "./style.css";
+import { 
+    StyledAdvantageCard,
+    AdvantageHeader,
+    AdvantageDescription,
+    AdvantageImgWrap,
+    AdvantageImg,
+    AdvantageTextWrap
+} from "./styled";
 
 export const AdvantageFeature = {
     BAD: "Магазинные продукты",
@@ -12,42 +19,25 @@ export const AdvantageFeature = {
     };
 
 function AdvantageCard({src, title, mark, desc}) {
-    let options;
 
-    switch (mark) {
-        case AdvantageFeature.GOOD:
-            options = {
-            subtitleColor: "green",
-            bgColor: "#E1EDCE"
-        };
-        break;
-        case AdvantageFeature.BAD:
-        options = {
-            subtitleColor: "red",
-            bgColor: "#F8DDD7"
-        };
-        break;
-        default:
-        options = {
-            subtitleColor: "#FFF",
-            bgColor: "#FFF"
-        };
-        break;
-        }
-
-    return <li className="advantage__card"
-    style={{ backgroundColor: options.bgColor }}>
-        <header className="advantage__header">
-            <picture className="advantage__imgWrap">
-                <img src={src} alt={src} />
-            </picture>
-            <div className="advantage__textWrap">
-                <Subitle color={options.subtitleColor}>{mark}</Subitle>
+    return <StyledAdvantageCard mark={mark}>
+        <AdvantageHeader>
+            <AdvantageImgWrap>
+                <AdvantageImg
+                width="200"
+                height="257"
+                maxWidth="200"
+                src={src}
+                alt={desc}
+                ></AdvantageImg>
+            </AdvantageImgWrap>
+            <AdvantageTextWrap>
+                <Subitle mark={mark}>{mark}</Subitle>
                 <Title size={TitleOptions.small}>{title}</Title>
-            </div>
-        </header>
-        <p className="advantage__desc">{desc}</p>
-    </li>;
+            </AdvantageTextWrap>
+        </AdvantageHeader>
+        <AdvantageDescription>{desc}</AdvantageDescription>
+    </StyledAdvantageCard>;
 }
 
 export default AdvantageCard;

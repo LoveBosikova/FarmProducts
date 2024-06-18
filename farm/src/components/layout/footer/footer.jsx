@@ -1,13 +1,16 @@
 import React from "react";
 import Logo from "../../ui/logo/logo";
 
-import "./style.css";
+import { 
+    StyledFooter, 
+    FooterText 
+} from "./styled";{}
 
 function Footer() {
-    return <footer className="footer">
+    return <StyledFooter>
         <Logo></Logo>
-        <p className="header__text">Создано 2024</p>
-    </footer>;
+        <FooterText>Создано 2024</FooterText>
+    </StyledFooter>;
 }
 
 export default Footer;

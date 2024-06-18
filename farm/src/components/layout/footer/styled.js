@@ -1,4 +1,6 @@
-.footer {
+import styled from "styled-components";
+
+export const StyledFooter = styled.footer`
     position: absolute;
     bottom: 0;
     left: 0;
@@ -14,12 +16,12 @@
     box-sizing: border-box;
     padding-right: 100px;
     padding-left: 100px;
-}
+`;
 
-.footer__text {
+export const FooterText = styled.p`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 40px;
-}
+`;
