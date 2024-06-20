@@ -1,12 +1,14 @@
-.title__wrap {
+import styled from "styled-components";
+
+export const TitleWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
     margin-bottom: 2rem;
-}
+`;
 
-.advantages-list {
+export const StyledAdvantagesList = styled.section`
     padding-top: 2rem;
     padding-bottom: 5rem;
 
@@ -14,9 +16,9 @@
         margin-left: auto;
         margin-right: auto;
     }
-}
+`;
 
-.advantages-list__list {
+export const StyledListComponent = styled.ul`
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -25,4 +27,4 @@
     gap: 5%;
     margin-left: auto;
     margin-right: auto;
-}
+`;

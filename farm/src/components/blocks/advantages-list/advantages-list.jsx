@@ -5,24 +5,29 @@ import { TitleOptions } from "../../ui/title/styled";
 import Button from "../../ui/button/button";
 import AdvantageCard from "../../ui/advantageCard/advantageCard";
 
-import "./style.css";
+import { 
+  TitleWrap,
+  StyledAdvantagesList,
+  StyledListComponent
+
+} from "./styled";
 
 function AdvantagesList({advantancies}) {
 
   if (!advantancies || advantancies.length === 0) return null;
   
   return (
-    <section className="advantages-list">
-      <div className="title__wrap">
-      <Title size={TitleOptions.medium}>Почему фермерские продукты лучше?</Title>
-      </div>
-      <ul className="advantages-list__list">
+    <StyledAdvantagesList>
+      <TitleWrap>
+        <Title size={TitleOptions.medium}>Почему фермерские продукты лучше?</Title>
+      </TitleWrap>
+      <StyledListComponent>
         {
-          advantancies.map((adv) => <AdvantageCard src={adv.src} title={adv.title} mark={adv.mark} desc={adv.desc} />)
+          advantancies.map((adv) => <AdvantageCard src={adv.src} title={adv.title} mark={adv.mark} desc={adv.desc} key={adv.src} />)
         }
-      </ul>
+      </StyledListComponent>
       <Button>Купить</Button>
-    </section>
+    </StyledAdvantagesList>
   );
 }
 
